@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        
+        .red{
+            background-color:yellow;
+        }
+
+
+    #green {
+        background-color:green;
+    }
+
+    div > p {
+
+        background-color: blue;
+    }
+ 
+    div h1{
+        background-color:aqua;
+    }
+    
+        *{
+            font-family:sans-serif
+        }
+        
+            a:visited{
+                color:purple;
+            }
+
+            a:link{
+                color:pink;
+            }
+
+            a:active{
+                color:tomato;
+            }
+            a:hover{
+                color:green;
+            }
+            p:first-child{
+                color:blueviolet
+            }
+    </style>
+
+</head>
+<body>
+    
+
+    <div>
+hi
+    </div>
+
+    <div class="red">
+        hi 2
+            </div>
+            <div Id="green">
+                I am using ID selector 
+            <p>Child Selector will work here
+                <h1> child inside a child</h1>
+            </p>       
+            
+          
+            </div>
+            <a href="https://google.com">Google</a>
+            <br>
+            <a href="https://facebook.com">Facebook</a>
+            <div>
+                <p>
+                    First child
+                </p>
+  <p>second child</p>
+            </div>
+
+
+</body>
+</html>
