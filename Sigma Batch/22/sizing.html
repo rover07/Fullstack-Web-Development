@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing Units</title>
+    <style>
+        html{
+            font-size: 12px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .box{
+            border:12px solid red;
+            /*width: 1920px;*/
+            background-color: aquamarine;
+            box-sizing: border-box;
+            width: 100vh;
+            margin:auto;
+        }
+        .container{
+            border:12px solid red;
+            /*width: 1920px;*/
+            background-color: aquamarine;
+            box-sizing: border-box;
+            width:80vh;
+            height: 70vh;
+            
+            margin:24px auto;   
+            font-size: 2em;
+        }
+        .container :nth-child(2){
+            margin:auto;
+            border: 8px dotted blue;
+            width:50%;
+            height:30%;
+            font-size:60%;
+        }
+        .idk{
+            border:12px solid red;
+            /*width: 1920px;*/
+            background-color: aquamarine;
+            box-sizing: border-box;
+            width:30vh;
+            height: 30vh;
+            
+            margin:24px auto;   
+            font-size: 3rem;
+        }
+        .mycon{
+            box-sizing: border-box;
+            border:12px solid red;
+            /*width: 1920px;*/
+            background-color: yellow;
+            box-sizing: border-box;
+            width:50vmin;
+            /*height:30vmax;*/
+            width:80vw;
+            min-height: 80vh;
+            margin:auto;
+            font-size:2rem;
+        }
+        .foobar{
+            min-height: 5vh;
+            box-sizing: border-box;
+            font-size: 2rem;
+            background-color: aliceblue;
+            color: black;
+            border: 5px solid red;
+            width: 80vw;
+            margin: 23px auto;
+
+        }
+    </style>
+    height: 20vh;
+</head>
+<body>
+    <div class="box">This is  a box</div>
+    <div class="container"> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor tempora, delectus iste deserunt in unde quo ipsam a repudiandae non quis inventore et.</p>
+    <p>hi there, this is 2nd child</p></div>
+   <div class="idk">hi there</div>
+<div class="mycon">This is another container to check vmin and vmax Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti quibusdam, facere autem ratione blanditiis recusandae dolorum hic, doloremque quas placeat eaque voluptatibus repudiandae suscipit porro reiciendis, minima voluptatem magni saepe vero tempora obcaecati! Alias dignissimos vero ipsa nisi? Beatae modi minus inventore cumque facere nam nostrum pariatur corrupti, at voluptatibus doloribus ex alias. Assumenda officia ea rerum odit architecto qui quibusdam inventore natus eius, dolores suscipit cum deserunt ipsa officiis modi vel! Aliquid beatae saepe perspiciatis doloremque inventore consectetur eaque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit cupiditate at illo dignissimos tempore? Et, reprehenderit dolores dicta, blanditiis quo earum temporibus fugit repellendus vitae animi provident veniam fugiat! Accusamus facilis eaque voluptas? Exercitationem consectetur quaerat accusantium provident tenetur magnam placeat nesciunt, commodi molestiae eveniet explicabo beatae dolorem maxime reiciendis distinctio minus. Neque molestiae aperiam quo nulla dicta voluptatum veritatis beatae provident, consequuntur eligendi harum minus laborum aut laudantium doloremque, veniam sed, cumque voluptatibus dolore suscipit labore. Ullam eos ipsum ipsa sint nobis? Cum asperiores reprehenderit voluptates accusantium ipsa fugiat delectus ducimus! Distinctio tempore voluptas et earum consequuntur nam ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eius vitae architecto quas. Impedit perferendis fugiat officiis enim possimus, aliquam odit, beatae culpa delectus minima necessitatibus, eaque architecto est maiores.</div>
+<div class="foobar">This is foobar</div>
+</body>
+</html>
