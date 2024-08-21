@@ -1,0 +1,16 @@
+
+body{
+    background-color: #0e0e0e;
+    font-size: 20;
+}
+#screenshot{
+height: auto;
+width: 60vmax;
+}
+.buttons{
+    background-color:  #0078d4;
+    font-weight: 300;
+    border-radius: 4px;
+    font-size: 20;
+    padding: 12px 24px;
+}
