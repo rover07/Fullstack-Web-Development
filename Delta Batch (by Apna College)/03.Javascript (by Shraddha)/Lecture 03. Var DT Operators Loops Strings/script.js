@@ -30,5 +30,5 @@ if (marks <= 100 && marks > 89) {
 } else if (marks < 90 && marks >= 70) {
   console.log("B grade ");
 } else {
-  console.log("Fail");
+  console.log("You Failed");
 }
