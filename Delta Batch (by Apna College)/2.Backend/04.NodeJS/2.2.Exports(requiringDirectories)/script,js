@@ -1,0 +1,5 @@
+const fruitsInfo = require("./Fruits");
+console.log(fruitsInfo);
+console.log("       ");
+
+console.log(fruitsInfo[0].color);
