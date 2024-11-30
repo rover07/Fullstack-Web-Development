@@ -1,0 +1,19 @@
+h1 {
+  color: Blue;
+}
+
+button {
+  background-color: antiquewhite;
+}
+
+.heading {
+  background-color: aqua;
+}
+
+/*which ever element will have green class will have this color*/
+.green {
+  color: green;
+}
+.underline {
+  text-decoration: underline black wavy;
+}
