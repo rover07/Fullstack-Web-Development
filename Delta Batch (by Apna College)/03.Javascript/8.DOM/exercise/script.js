@@ -1,22 +1,28 @@
-// // Exercise 01
-// let append=document.querySelector("body")
-// console.log(append)
+// // // 1. add paragraph to html
+let para1 = document.createElement("p");
+para1.innerText = "Hey I'm red";
+let body = document.querySelector("body");
+body.append(para1);
 
-// append.innerText+=" from Vaibhav Chauhan"
+//
+// //2. make color of text red
+para1.classList.add("red");
 
-// //Exercise 02
+// // 3. add h3 with blue text that says I'm a blue h3
+let h3 = document.createElement("h3");
+h3.innerText = "I'm a blue h3";
+body.append(h3);
 
-    // let divs=document.querySelectorAll("div")
-    // console.log(divs);
+h3.classList.add("blue");
 
-    // divs[0].innerText=divs[0].innerText+" changes made here on 1st div"
-    // divs[1].innerText=divs[1].innerText+"changes made in 2nd "
+// // 4.
 
-    //BETTER WAY USING LOOPS
+let div = document.createElement("div");
+let h1 = document.createElement("h1");
+let para2 = document.createElement("p2");
 
-    let divs=document.querySelectorAll(".box")
-    let index=0
-    for (const idk of divs) {
-        idk.innerText=`New unique value ${index}`;
-        index++
-    }
+h1.innerText = "I'm in a div";
+para2.innerText = "ME TOO!";
+body.append(div);
+div.append(h1, para2);
+div.classList.add("box");
