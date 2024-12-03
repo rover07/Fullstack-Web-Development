@@ -121,15 +121,47 @@
 
 //
 // // // input event
-let user = document.querySelector("#name");
-user.addEventListener("input", function (event) {
-  event.preventDefault();
-  console.log("input event ");
-  console.log("final value:", this.value);
-});
+// let user = document.querySelector("#name");
+// user.addEventListener("input", function (event) {
+//   event.preventDefault();
+//   console.log("input event ");
+//   console.log("final value:", this.value);
+// });
+
+//
+//
+//
 // // // Exercise
 // let btn = document.querySelector("button");
 // btn.addEventListener("click", function () {
 //   event.preventDefault();
 //   this.style.backgroundColor = "Green";
 // });
+
+//
+//
+//
+// // // Stop Propogation
+// let div = document.querySelector("div");
+// let ul = document.querySelector("ul");
+// let lis = document.querySelectorAll("li");
+
+// div.addEventListener("click", function () {
+//   console.log("div was clicked");
+// });
+// ul.addEventListener("click", function (event) {
+//   event.stopPropagation();
+//   console.log("ul was clicked");
+// });
+
+// for (li of lis) {
+//   li.addEventListener("click", function (event) {
+//     event.stopPropagation();
+//     console.log("li was clicked");
+//   });
+// }
+
+//
+// //
+//
+// // // // To do Activity
