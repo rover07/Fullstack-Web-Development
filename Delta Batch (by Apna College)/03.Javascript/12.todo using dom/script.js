@@ -13,6 +13,7 @@ btn.addEventListener("click", function (event) {
 
   let task = document.createElement("li");
   let delBtn = document.createElement("button");
+
   delBtn.innerText = "X";
   delBtn.classList.add("delete");
 
