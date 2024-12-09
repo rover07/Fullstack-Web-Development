@@ -64,47 +64,74 @@
 //getFacts(); use this in console to print
 
 // // // HTTP requests using Axios
-let url = "https://catfact.ninja/fact";
-let btn = document.querySelector("#catBtn");
-let p = document.querySelector("#result");
+// let url = "https://catfact.ninja/fact";
+// let btn = document.querySelector("#catBtn");
+// let p = document.querySelector("#result");
 
-btn.addEventListener("click", async () => {
-  let fact = await getFacts();
-  console.log(fact);
+// btn.addEventListener("click", async () => {
+//   let fact = await getFacts();
+//   console.log(fact);
 
-  p.innerText = fact;
-});
+//   p.innerText = fact;
+// });
 
-async function getFacts() {
-  try {
-    let response = await axios.get(url);
-    return response.data.fact;
-  } catch (error) {
-    console.log("error occurred:", error);
-    return "NO fact found!!!";
-  }
-}
+// async function getFacts() {
+//   try {
+//     let response = await axios.get(url);
+//     return response.data.fact;
+//   } catch (error) {
+//     console.log("error occurred:", error);
+//     return "NO fact found!!!";
+//   }
+// }
 
 //
 // // // Dog images on screen
 //
-let url2 = "https://dog.ceo/api/breeds/image/random";
-let btn2 = document.querySelector("#dogBtn");
-let dogImg = document.querySelector("#dogImg");
+// let url2 = "https://dog.ceo/api/breeds/image/random";
+// let btn2 = document.querySelector("#dogBtn");
+// let dogImg = document.querySelector("#dogImg");
 
-btn2.addEventListener("click", async () => {
-  let link = await getImage();
-  console.log(link);
-  dogImg.setAttribute("src", link);
-});
+// btn2.addEventListener("click", async () => {
+//   let link = await getImage();
+//   console.log(link);
+//   dogImg.setAttribute("src", link);
+// });
 
-async function getImage() {
+// async function getImage() {
+//   try {
+//     let res = await axios.get(url2);
+//     return res.data.message;
+//     // return res.data;
+//   } catch (e) {
+//     console.log("error occurred:", e);
+//     return "NO image found!!!";
+//   }
+// }
+
+// // // // // sending headers with api requests
+// const url = "https://icanhazdadjoke.com/";
+
+// async function getJokes() {
+//   try {
+//     const config = { headers: { Accept: "application/json" } }; // header
+//     let res = await axios.get(url, config);
+//     console.log(res.data.joke);
+//   } catch (err) {
+//     console.log("Error:", err);
+//   }
+// }
+// getJokes(); // we are getting data in the form of html, we want in json
+// // for that, we have to pass our demand in header
+
+let url = "http://universities.hipolabs.com/search?name=";
+let country = "India";
+
+async function getClg() {
   try {
-    let res = await axios.get(url2);
-    return res.data.message;
-    // return res.data;
+    let res = await axios.get(url + country);
+    console.log(res.data);
   } catch (e) {
-    console.log("error occurred:", e);
-    return "NO image found!!!";
+    console.log("error:", e);
   }
 }
