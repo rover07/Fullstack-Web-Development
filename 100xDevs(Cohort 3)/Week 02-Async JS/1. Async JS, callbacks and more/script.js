@@ -24,6 +24,8 @@
 
 //
 // // // // I/O heavy operations
+/* The code snippet you provided is demonstrating the usage of the Node.js File System (fs) module in
+JavaScript. Here's a breakdown of what the code is doing: */
 
 // Using file system library
 const fsLibrary = require("fs");
@@ -33,12 +35,31 @@ const fsLibrary = require("fs");
 // console.log(fsLibrary);
 // created a.txt file in the same directory
 
-// readFile -> reads asynchronously
+// readFile -> reads asynchronously (Better)
 // readFileSync -> reads synchronously
-let content1 = fsLibrary.readFileSync("a.txt", "utf-8"); // utf8 converts hexadeca to readable string
-console.log(content1);
+// let content1 = fsLibrary.readFileSync("a.txt", "utf-8"); // utf8 converts hexadeca to readable string
+// console.log(content1);
 
-let content2 = fsLibrary.readFileSync("b.txt", "utf-8");
-console.log(content2);
+// let content2 = fsLibrary.readFileSync("b.txt", "utf-8");
+// console.log(content2);
 
-// Running IO bound tasks async is better
+////  Running IO bound tasks async is better
+
+//
+// Callback: Using function as a argument of another function
+function add(a, b, op) {
+  return op(a, b);
+}
+
+function sum(a, b) {
+  return a + b;
+}
+function divide(a, b) {
+  return a / b;
+}
+function sub(a, b) {
+  return a - b;
+}
+
+let finalAns = add(4, 9, divide);
+console.log(finalAns);
