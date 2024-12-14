@@ -1,0 +1,1 @@
+Hi there, this is a text from an external file (a)
