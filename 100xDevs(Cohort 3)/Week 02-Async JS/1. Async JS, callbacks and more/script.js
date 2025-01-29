@@ -36,7 +36,7 @@ const fsLibrary = require("fs");
 // created a.txt file in the same directory
 
 // readFile -> reads asynchronously (Better)
-// readFileSync -> reads synchronously
+// readFileSync -> reads synchronously  
 // let content1 = fsLibrary.readFileSync("a.txt", "utf-8"); // utf8 converts hexadeca to readable string
 // console.log(content1);
 
