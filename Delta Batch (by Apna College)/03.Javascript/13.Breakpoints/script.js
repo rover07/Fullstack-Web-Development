@@ -11,14 +11,11 @@
 
 // three();
 
-// // // // Callbacl hell
+// // // // Callback hell
 
 // // #1 Synchronous code
 // h1 = document.querySelector("h1");
 
-// function changeColor(color) {
-//   h1.style.color = color;
-// }
 // setTimeout(() => {
 //   h1.style.color = "red";
 // }, 1000);
@@ -30,12 +27,13 @@
 // }, 3000);
 
 // //  #2 This doesnt execute immediately
-// h1 = document.querySelector("h1");
-// function changeColor(color, delay) {
-//   setTimeout(() => {
-//     h1.style.color = color;
-//   }, delay);
-// }
+h1 = document.querySelector("h1");
+
+function changeColor(color, delay) {
+  setTimeout(() => {
+    h1.style.color = color;
+  }, delay);
+}
 
 // This will change color all at once, we will get only final color ie. Green
 
@@ -43,7 +41,7 @@
 // changeColor("orange", 1000);
 // changeColor("green", 1000);
 
-// THis will change in intervals, but not a good way as the functions are independent, if first function fails, the next will get execute
+// This will change in intervals, but not a good way as the functions are independent, if first function fails, the next will get executed
 // changeColor("red", 1000);
 // changeColor("orange", 2000);
 // changeColor("green", 3000);
@@ -69,6 +67,42 @@
 // });
 // I;
 // //callbacks nesting - callback hell
+
+// // // // Promises
+
+function savetoDB(data, success, failure) {
+  let internetSpeed = Math.floor(Math.random() * 10) + 1;
+  if (internetSpeed > 4) success();
+  else failure();
+}
+
+savetoDB(
+  "rover",
+  () => {
+    console.log("Data 1 Saved");
+    savetoDB(
+      "apna college",
+      () => {
+        console.log("Data 2 was saved");
+        savetoDB(
+          "idk",
+          () => {
+            console.log("Data 3 was saved");
+          },
+          () => {
+            console.log("Data 3 failed");
+          }
+        );
+      },
+      () => {
+        console.log("Data 2 failed");
+      }
+    );
+  },
+  () => {
+    console.log("Data 1 failed");
+  }
+);
 
 //
 //
@@ -190,43 +224,37 @@
 // // // Exercise: promises on change color
 //
 //
-h1 = document.querySelector("h1");
+// h1 = document.querySelector("h1");
 
-function changeColor(color, delay) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      h1.style.color = color;
-      resolve("color changed!");
-    }, delay);
-  });
-}
+// function changeColor(color, delay) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       h1.style.color = color;
+//       resolve("color changed!");
+//     }, delay);
+//   });
+// }
 
-// to check state of promise. use let requestPromise = changeColor("color",1000) -> resuestPromise
-let requestPromise = changeColor("red", 1000)
-  .then((result) => {
-    console.log("Red color was completed ");
-    console.log(result);
+// // to check state of promise. use let requestPromise = changeColor("color",1000) -> resuestPromise
+// let requestPromise = changeColor("red", 1000)
+//   .then((result) => {
+//     console.log("Red color was completed ");
+//     console.log(result);
 
-    return changeColor("green", 1000);
-  })
-  .then((result) => {
-    console.log("Green color was completed ");
-    console.log(result);
+//     return changeColor("green", 1000);
+//   })
+//   .then((result) => {
+//     console.log("Green color was completed ");
+//     console.log(result);
 
-    return changeColor("blue", 1000);
-  })
-  .then((result) => {
-    console.log("Blue color was completed ");
-    console.log(result);
-    return changeColor("yellow", 1000);
-  })
-  .catch((error) => {
-    console.log("Color not changed");
-    console.log(error);
-  });
-//
-//
-//
-//
-
-// // // // Async & Await
+//     return changeColor("blue", 1000);
+//   })
+//   .then((result) => {
+//     console.log("Blue color was completed ");
+//     console.log(result);
+//     return changeColor("yellow", 1000);
+//   })
+//   .catch((error) => {
+//     console.log("Color not changed");
+//     console.log(error);
+//   });
