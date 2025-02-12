@@ -70,39 +70,20 @@ function changeColor(color, delay) {
 
 // // // // Promises
 
-function savetoDB(data, success, failure) {
-  let internetSpeed = Math.floor(Math.random() * 10) + 1;
-  if (internetSpeed > 4) success();
-  else failure();
+let h1 = document.querySelector("h1");
+
+function changeColor(color, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      h1.style.color = color;
+      resolve("color changed");
+    }, delay);
+  });
 }
 
-savetoDB(
-  "rover",
-  () => {
-    console.log("Data 1 Saved");
-    savetoDB(
-      "apna college",
-      () => {
-        console.log("Data 2 was saved");
-        savetoDB(
-          "idk",
-          () => {
-            console.log("Data 3 was saved");
-          },
-          () => {
-            console.log("Data 3 failed");
-          }
-        );
-      },
-      () => {
-        console.log("Data 2 failed");
-      }
-    );
-  },
-  () => {
-    console.log("Data 1 failed");
-  }
-);
+changeColor(color, delay).then(() => {
+  console.log("Color Changed");
+});
 
 //
 //
@@ -120,12 +101,13 @@ savetoDB(
 //   }
 // }
 
+//      // Here we are creating dependency + The logs are done async while the callbacks for succcess and failure is synchronous
 // saveToDB(
 //   "random data",
 //   () => {
 //     console.log("Success: Your data is saved");
 //     // if data saved successfully, then save another data (creating dependency)
-//     saveToDB(
+//    saveToDB(
 //       "random data 2",
 //       () => {
 //         console.log("Success: data 2 saved");
