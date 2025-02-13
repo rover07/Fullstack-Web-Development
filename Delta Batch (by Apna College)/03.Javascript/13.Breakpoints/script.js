@@ -27,13 +27,13 @@
 // }, 3000);
 
 // //  #2 This doesnt execute immediately
-h1 = document.querySelector("h1");
+// h1 = document.querySelector("h1");
 
-function changeColor(color, delay) {
-  setTimeout(() => {
-    h1.style.color = color;
-  }, delay);
-}
+// function changeColor(color, delay) {
+//   setTimeout(() => {
+//     h1.style.color = color;
+//   }, delay);
+// }
 
 // This will change color all at once, we will get only final color ie. Green
 
@@ -67,23 +67,6 @@ function changeColor(color, delay) {
 // });
 // I;
 // //callbacks nesting - callback hell
-
-// // // // Promises
-
-let h1 = document.querySelector("h1");
-
-function changeColor(color, delay) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      h1.style.color = color;
-      resolve("color changed");
-    }, delay);
-  });
-}
-
-changeColor(color, delay).then(() => {
-  console.log("Color Changed");
-});
 
 //
 //
