@@ -21,7 +21,18 @@ function App() {
     // setCounter(counter++);
 
     if (counter <= 20) {
-      setCounter(counter++);
+      setCounter(counter + 1);
+      // // Interview Question: what will happen if i use setCounter(counter+1) twice?
+      setCounter(counter + 1);
+      // // Answer:
+      // // Reason: setState sends updates in UI and variables in batches
+      // prevCounter fetches last updated state
+      // prevCounter is just a placeholder name, I can use anything; even counter=>counter+1
+      // another bad code writing issue: mention same placeholder name evenly for good practive, else not an issue but bad practice
+      // when the prevCounter comes via callback, after completion ; it is updated properly. ie. things updated in callback works
+      setCounter((prevCounter) => prevCounter + 1);
+      // Why does the below one work? chatGPT help me with this
+      setCounter((counter = counter + 1));
     }
   };
 
