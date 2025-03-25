@@ -5,6 +5,7 @@ function App() {
   const [numberAllow, setNumberAllow] = useState(false);
   const [charAllow, setCharAllow] = useState(false);
   const [pass, setPass] = useState(""); // we're not giving any default password as we are going to generate it
+  // console.log("🚀 ~ App ~ setPass:", setPass)
 
   // pass generator method
   // number, char are dependencies
