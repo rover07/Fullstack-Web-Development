@@ -1,4 +1,4 @@
-# This is my Web Development Repository
+# This is my Web Development Repository.
 
 - Cohort Notes: 
 -- https://scratched-desert-d67.notion.site/Cohort-3-0-Notes-106966193aab80deaea6c43461ae5b71
