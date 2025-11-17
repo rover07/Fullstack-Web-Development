@@ -1,0 +1,32 @@
+[
+  {
+    // user_id and all here are snake_case whereas in classes, we have camelCase
+    // We have to deserialize snake_case to camelCase
+    // Deserialization here: when we take a data/user Eg. a user from here, we tell java which class to map this data to
+    "user_id": "abcdef",
+    "name": "Lovepreet Singh",
+    "hashed_password": "12345",
+    "tickets_booked": [
+      {
+        "source": "Bangalore",
+        "destination": "Delhi",
+        "date_of_travel": "2023-12-08T18:30:00Z",
+        "train": {
+          "train_id": "bacs",
+          "train_no": 12345,
+          "seats": [
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0],
+            [0,0,0,0,0,0]
+          ],
+          "stations": {
+            "Bangalore": "13:50:00",
+            "Jaipur": "13:50:00",
+            "Delhi": "13:50:00"
+          }
+        }
+      }
+    ]
+  }
+]
